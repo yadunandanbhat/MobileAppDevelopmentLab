@@ -1,6 +1,6 @@
 # Calculator
 
-<img title="Screenshot of the Calculator App" src="Calculator/CalculatorScreenshot.png">
+<img title="Screenshot of the Calculator App" src="CalculatorScreenshot.png">
 
 > Question:
 
