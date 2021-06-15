@@ -17,6 +17,8 @@ import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
+    // This binding function helps us to refer to the widgets directly instead of finding them by findViewById()
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private double valueOne;
     private double valueTwo;
 
+    // This is used to format the output to 3 decimal points
     private static DecimalFormat REAL_FORMATTER = new DecimalFormat("0.###");
 
     private static final char ADDITION = '+';
@@ -35,30 +38,35 @@ public class MainActivity extends AppCompatActivity {
 
     private char CURRENT_ACTION;
 
+    // Addition function
     public void add(View view) {
         CURRENT_ACTION = ADDITION;
         computeCalculation();
         return;
     }
 
+    // Subtraction function
     public void sub(View view) {
         CURRENT_ACTION = SUBTRACTION;
         computeCalculation();
         return;
     }
 
+    // Multiplication function
     public void mul(View view) {
         CURRENT_ACTION = MULTIPLICATION;
         computeCalculation();
         return;
     }
 
+    // Divison function
     public void div(View view) {
         CURRENT_ACTION = DIVISION;
         computeCalculation();
         return;
     }
 
+    // This compute function is used to calculate the output and print the output
     private void computeCalculation() {
         valueOne = Double.parseDouble(binding.editTextNumberDecimal2.getText().toString());
         if (!Double.isNaN(valueOne)) {
