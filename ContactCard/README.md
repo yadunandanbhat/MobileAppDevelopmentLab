@@ -1,6 +1,6 @@
 # Contact Card
 
-<img title="Screenshot of the Contact Card App" src="/ContactCardScreenshot.png">
+<img title="Screenshot of the Contact Card App" src="ContactCard/ContactCardScreenshot.png">
 
 > Question:
 
