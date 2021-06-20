@@ -9,6 +9,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity2 extends AppCompatActivity {
+    //Many of these are same as the first activity.
     EditText username, password;
     Button signin;
 
@@ -23,6 +24,7 @@ public class MainActivity2 extends AppCompatActivity {
         password = findViewById(R.id.password2);
         signin = findViewById(R.id.signin);
 
+        //This is used to get the bundle from the first activity.
         Bundle bundle = getIntent().getExtras();
         String userName = bundle.getString("username");
         String passWord = bundle.getString("password");
@@ -34,11 +36,14 @@ public class MainActivity2 extends AppCompatActivity {
                 String pword = password.getText().toString();
 
                 if (uname.equals(userName) && pword.equals(passWord)) {
+                    //This displays a toast if it logs in successfully.
                     Toast.makeText(MainActivity2.this, "Success", Toast.LENGTH_SHORT).show();
                 }
                 else {
+                    //This is a counter to check the number of attempts.
                     count++;
                     if (count>=3) {
+                        //If more than 3 attempts, then the sign in button gets disabled.
                         signin.setEnabled(false);
                         Toast.makeText(MainActivity2.this, "Tries exceeded more than 3!\nSign in disabled!", Toast.LENGTH_LONG).show();
                     }
