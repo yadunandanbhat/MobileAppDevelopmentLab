@@ -10,23 +10,29 @@
         android:id="@+id/username2"
         android:layout_width="266dp"
         android:layout_height="43dp"
+        android:layout_marginBottom="28dp"
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="93dp" />
+        app:layout_constraintBottom_toTopOf="@+id/password2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/password2"
         android:layout_width="266dp"
         android:layout_height="43dp"
+        android:layout_marginBottom="28dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="344dp" />
+        app:layout_constraintBottom_toTopOf="@+id/signin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -36,13 +42,19 @@
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="83dp" />
+        app:layout_constraintBottom_toTopOf="@+id/username2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.771" />
 
     <Button
         android:id="@+id/signin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="248dp"
         android:text="Sign In!"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="435dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

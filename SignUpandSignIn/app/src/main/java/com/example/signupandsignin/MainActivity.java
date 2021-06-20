@@ -34,11 +34,16 @@ public class MainActivity extends AppCompatActivity {
                 String passWord = password.getText().toString();
 
                 if (validatePassword(passWord)) {
+                    Bundle bundle = new Bundle();
+                    bundle.putString("username", userName);
+                    bundle.putString("password", passWord);
+
                     Intent intent =  new Intent(MainActivity.this, MainActivity2.class);
+                    intent.putExtras(bundle);
                     startActivity(intent);
                 }
                 else {
-                    Toast.makeText(MainActivity.this, "Invlaid password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Invalid password", Toast.LENGTH_SHORT).show();
                 }
             }
         });
